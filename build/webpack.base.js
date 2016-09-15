@@ -1,7 +1,8 @@
-var path = require('path')
-var webpack = require('webpack')
-var webpackHotMiddlewareConfig = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
+const path = require('path')
+const webpack = require('webpack')
+const webpackHotMiddlewareConfig = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
 const getEntries = require('./getEntries')
+
 module.exports = {
     context: path.resolve(__dirname, '../'),
     output: {
