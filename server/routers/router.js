@@ -6,11 +6,11 @@ router.get('/user/:id', function (req, res) {
 })
 
 router.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', { title: 'index', bundle: 'index'})
 })
 
 router.get('/login', function (req, res) {
-  res.render('login');
+  res.render('login', { title: 'login', bundle: 'login'})
 })
 
 module.exports = router

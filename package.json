@@ -4,12 +4,12 @@
   "author": "Awe <hilongjw@gmail.com>",
   "private": true,
   "scripts": {
+    "start": "node app",
     "dev": "cross-env NODE_ENV=development supervisor -w server,app.js app",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.production.js --progress --hide-modules"
   },
   "dependencies": {
     "ejs": "^2.5.2",
-    "morgan": "^1.7.0",
     "vue": "^2.0.0-rc.1"
   },
   "devDependencies": {
@@ -23,6 +23,7 @@
     "webpack": "^2.1.0-beta.20",
     "webpack-dev-middleware": "^1.7.0",
     "webpack-dev-server": "^2.1.0-beta.0",
-    "webpack-hot-middleware": "^2.12.2"
+    "webpack-hot-middleware": "^2.12.2",
+    "webpack-merge": "^0.14.1"
   }
 }

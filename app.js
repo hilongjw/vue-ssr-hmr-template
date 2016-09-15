@@ -22,7 +22,7 @@ if (isDev) {
     const webpack = require('webpack')
     const webpackDevMiddleware = require('webpack-dev-middleware')
     const webpackHotMiddleware = require('webpack-hot-middleware')
-    const webpackDevConfig = require('./webpack.config.js')
+    const webpackDevConfig = require('./build/webpack.config.js')
 
     const compiler = webpack(webpackDevConfig)
 
