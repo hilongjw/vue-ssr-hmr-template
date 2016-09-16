@@ -2,7 +2,6 @@
   "name": "cov-x",
   "description": "A Vue.js project",
   "author": "Awe <hilongjw@gmail.com>",
-  "private": true,
   "scripts": {
     "start": "node app",
     "dev": "cross-env NODE_ENV=development supervisor -w server,app.js app",
