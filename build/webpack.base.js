@@ -33,6 +33,7 @@ module.exports = {
             }
         }]
     },
+    vue: {},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
