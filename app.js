@@ -1,9 +1,9 @@
 const express = require('express')
 const path = require('path')
 const http = require('http')
+global.NODE_ENV = process.env.NODE_ENV || 'production'
 
 const PORT = 8080
-const NODE_ENV = process.env.NODE_ENV || 'production'
 const isDev = NODE_ENV === 'development';
 const app = express()
 const router = require('./server/routers/router')

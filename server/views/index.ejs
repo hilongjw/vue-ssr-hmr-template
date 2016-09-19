@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title><%= title %></title>
+    <% if (NODE_ENV !== 'development') { %>
+        <link rel="stylesheet" href="css/<%= bundle %>.css">
+    <% } %>
   </head>
   <body>
     <div id="app"></div>
