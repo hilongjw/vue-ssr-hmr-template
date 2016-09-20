@@ -33,7 +33,13 @@ module.exports = {
             }
         }]
     },
-    vue: {},
+    vue: {
+        postcss: [
+            require('autoprefixer')({
+                browsers: ['last 3 versions']
+            })
+        ]
+    },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
