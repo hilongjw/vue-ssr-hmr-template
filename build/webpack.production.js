@@ -32,6 +32,19 @@ const productionConf = merge(baseConfig, {
           cssProcessorOptions: { discardComments: {removeAll: true } },
           canPrint: true
         }),
+        new webpack.LoaderOptionsPlugin({
+            vue: {
+                postcss: [
+                    require('autoprefixer')({
+                        browsers: ['last 3 versions']
+                    })
+                ],
+                css: ExtractTextPlugin.extract({
+                    loader: "css-loader",
+                    fallbackLoader: "vue-style-loader"
+                })
+            }
+        }),
         new ExtractTextPlugin('css/[name].css')
     ]
 })

@@ -12,10 +12,7 @@ module.exports = {
         chunkFilename: 'js/[name].js'
     },
     resolve: {
-        extensions: ['', '.js', '.vue']
-    },
-    resolveLoader: {
-        root: path.join(__dirname, 'node_modules'),
+        extensions: ['.js', '.vue']
     },
     module: {
         loaders: [{
@@ -32,13 +29,6 @@ module.exports = {
                 name: 'file/[name].[ext]'
             }
         }]
-    },
-    vue: {
-        postcss: [
-            require('autoprefixer')({
-                browsers: ['last 3 versions']
-            })
-        ]
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
