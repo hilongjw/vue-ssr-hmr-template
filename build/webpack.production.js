@@ -6,13 +6,6 @@ const getEntries = require('./getEntries')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-baseConfig.vue.loaders = {
-    css: ExtractTextPlugin.extract({
-        loader: "css-loader",
-        fallbackLoader: "vue-style-loader"
-    })
-}
-
 const productionConf = merge(baseConfig, {
     entry: getEntries(),
     stats: { children: false },
