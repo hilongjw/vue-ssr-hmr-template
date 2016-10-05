@@ -5,10 +5,13 @@ body {
 </style>
 
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}inde</h1>
-  </div>
+    <div id="app">
+        <nav class="nav-box">
+            <router-link to="/home">Home</router-link>
+            <router-link to="/entry">Entry</router-link>
+        </nav>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
