@@ -6,13 +6,6 @@ const getEntries = require('./getEntries')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-baseConfig.vue.loaders = {
-    css: ExtractTextPlugin.extract({
-        loader: "css-loader",
-        fallbackLoader: "vue-style-loader"
-    })
-}
-
 const productionConf = merge(baseConfig, {
     entry: getEntries(),
     stats: { children: false },
@@ -31,6 +24,19 @@ const productionConf = merge(baseConfig, {
           cssProcessor: require('cssnano'),
           cssProcessorOptions: { discardComments: {removeAll: true } },
           canPrint: true
+        }),
+        new webpack.LoaderOptionsPlugin({
+            vue: {
+                postcss: [
+                    require('autoprefixer')({
+                        browsers: ['last 3 versions']
+                    })
+                ],
+                css: ExtractTextPlugin.extract({
+                    loader: "css-loader",
+                    fallbackLoader: "vue-style-loader"
+                })
+            }
         }),
         new ExtractTextPlugin('css/[name].css')
     ]
