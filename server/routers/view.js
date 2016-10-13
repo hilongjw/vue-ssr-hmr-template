@@ -10,7 +10,7 @@ const indexRenderer = vueRender({
     projectName: 'index', 
     rendererOptions: {
         cache: require('lru-cache')({
-            max: 1000,
+            max: 10240,
             maxAge: 1000 * 60 * 15
         })
     }, 
@@ -24,7 +24,7 @@ function render (view, data) {
 }
 
 function index (req, res) {
-    const template = render('index', { title: '柚木小报 UMoon-Daily', bundle: 'index' })
+    const template = render('index', { title: 'cov-x', bundle: 'index' })
     indexRenderer(req, res, template)
 }
 
