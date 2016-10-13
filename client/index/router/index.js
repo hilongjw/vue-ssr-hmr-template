@@ -5,11 +5,7 @@ Vue.use(Router)
 
 const Home = require('../views/Home.vue')
 
-const Article = resolve => {
-    require.ensure(['../views/Article.vue'], () => {
-        resolve(require('../views/Article.vue'))
-    })
-}
+const Article = require('../views/Article.vue')
 
 export default new Router({
     mode: 'history',

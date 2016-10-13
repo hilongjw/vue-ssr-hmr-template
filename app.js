@@ -9,7 +9,7 @@ const app = express()
 const router = require('./server/routers/router')
 
 app.set('views', path.join(__dirname, 'server/views'))
-app.set('view engine', 'ejs')
+app.set('view engine', 'pug')
 
 app.use(router)
 

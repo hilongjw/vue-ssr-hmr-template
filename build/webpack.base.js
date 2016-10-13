@@ -8,8 +8,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '../public'),
         publicPath: '/',
-        filename: 'js/[name].js',
-        chunkFilename: 'js/[name].js'
+        filename: 'client/[name].js',
+        chunkFilename: 'client/[name].js'
     },
     resolve: {
         extensions: ['.js', '.vue']

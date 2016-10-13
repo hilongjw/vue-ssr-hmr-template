@@ -1,12 +1,12 @@
 const webpack = require('webpack')
 const base = require('./webpack.base')
-
+const getEntries = require('./getEntries')
 module.exports = Object.assign({}, base, {
   target: 'node',
   devtool: false,
-  entry: './client/index/server-entry.js',
+  entry: getEntries(null, ['login'], true),
   output: Object.assign({}, base.output, {
-    filename: 'server-bundle.js',
+    filename: 'server/[name].js',
     libraryTarget: 'commonjs2'
   }),
   externals: Object.keys(require('../package.json').dependencies),

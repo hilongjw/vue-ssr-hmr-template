@@ -8,7 +8,7 @@ body {
     <div id="app">
         <nav class="nav-box">
             <router-link to="/home">Home</router-link>
-            <router-link to="/entry">Entry</router-link>
+            <router-link to="/article">Article</router-link>
         </nav>
         <router-view></router-view>
     </div>
