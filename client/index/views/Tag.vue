@@ -7,6 +7,7 @@
 </template>
 <script>
 export default {
+    name: 'Tag',
     serverCacheKey: () => 'tag'
 }
 </script>
