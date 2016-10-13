@@ -569,15 +569,6 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_vuex___default.a.Store({
     components: {
         compA: __WEBPACK_IMPORTED_MODULE_0__components_compA_vue___default.a
     },
-    preFetch: function preFetch() {
-        return new Promise(function (resolve, reject) {
-            setTimeout(function () {
-                console.log('just test');
-                resolve();
-            }, 1000);
-        });
-    },
-
     methods: {
         addOne: function addOne() {
             this.list.push('233');
@@ -693,7 +684,7 @@ var __vue_exports__, __vue_options__
 __vue_exports__ = __webpack_require__(7)
 
 /* template */
-var __vue_template__ = __webpack_require__(18)
+var __vue_template__ = __webpack_require__(19)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -747,7 +738,7 @@ var __vue_exports__, __vue_options__
 __vue_exports__ = __webpack_require__(9)
 
 /* template */
-var __vue_template__ = __webpack_require__(19)
+var __vue_template__ = __webpack_require__(18)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -803,13 +794,7 @@ module.exports={render:function (){with(this) {
 }},staticRenderFns: [function (){with(this) {
   return _h('div', [_h('div', {
     staticClass: "content home"
-  }, [_h('div', {
-    staticClass: "readme"
-  }, [_h('a', {
-    attrs: {
-      "href": "https://github.com/hilongjw/vue-ssr"
-    }
-  }, [_h('h2', ["Vue SSR"])]), " ", _h('p', ["\n                 Use Vue 2.0 server-side rendering with Express\n             "])])])])
+  }, ["\n         it's entry page\n    "])])
 }}]}
 
 /***/ },
@@ -821,7 +806,13 @@ module.exports={render:function (){with(this) {
 }},staticRenderFns: [function (){with(this) {
   return _h('div', [_h('div', {
     staticClass: "content home"
-  }, ["\n         it's entry page\n    "])])
+  }, [_h('div', {
+    staticClass: "readme"
+  }, [_h('a', {
+    attrs: {
+      "href": "https://github.com/hilongjw/vue-ssr"
+    }
+  }, [_h('h2', ["Vue SSR"])]), " ", _h('p', ["\n                 Use Vue 2.0 server-side rendering with Express\n             "])])])])
 }}]}
 
 /***/ },

@@ -22,14 +22,6 @@ export default {
     components: {
         compA
     },
-    preFetch () {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                console.log('just test')
-                resolve()
-            }, 1000)
-        })
-    },
     methods: {
         addOne () {
             this.list.push('233')
