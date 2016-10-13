@@ -23,7 +23,7 @@ module.exports = {
             loader: 'babel',
             exclude: /node_modules/
         }, {
-            test: /\.(png|jpg|gif|svg)$/,
+            test: /\.(png|jpg|gif|svg|ttf|woff|eot)$/,
             loader: 'file',
             query: {
                 name: 'file/[name].[ext]'
