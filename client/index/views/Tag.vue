@@ -5,3 +5,8 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    serverCacheKey: () => 'tag'
+}
+</script>

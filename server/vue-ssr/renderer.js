@@ -23,9 +23,13 @@ function getHTML (template) {
     }
 }
 
+function getFileName (webpackServer, projectName) {
+    return webpackServer.output.filename.replace('[name]', projectName)
+}
+
 let renderer = {}
 
-function VueRender (projectName, rendererOptions, webpackServer) {
+function VueRender ({ projectName, rendererOptions, webpackServer }) {
 
     const options = Object.assign({}, DEFAULT_RENDERER_OPTIONS, rendererOptions)
 
@@ -37,7 +41,7 @@ function VueRender (projectName, rendererOptions, webpackServer) {
         const HTML = getHTML(template)
 
         if (!isDev) {
-            const bundlePath = path.join(webpackServer.output.path, 'server/' + projectName + '.js')
+            const bundlePath = path.join(webpackServer.output.path, getFileName(webpackServer, projectName))
             renderer[projectName] = createRenderer(fs.readFileSync(bundlePath, 'utf-8'))
         } else {
             require('./bundle-loader')(webpackServer, projectName, bundle => {

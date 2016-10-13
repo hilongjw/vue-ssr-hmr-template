@@ -9,8 +9,7 @@ sync(store, router)
 const app = new Vue({
     store,
     router,
-    el: '#app',
-    render: h => h(App)
+    ...App
 })
 
 export { app, router, store }

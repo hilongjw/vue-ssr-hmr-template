@@ -27,15 +27,18 @@ const productionConf = merge(baseConfig, {
         }),
         new webpack.LoaderOptionsPlugin({
             vue: {
-                postcss: [
-                    require('autoprefixer')({
-                        browsers: ['last 3 versions']
+                loaders: {
+                    postcss: [
+                        require('autoprefixer')({
+                            browsers: ['last 3 versions']
+                        })
+                    ],
+                    css: ExtractTextPlugin.extract({
+                        loader: "css-loader",
+                        fallbackLoader: "vue-style-loader"
                     })
-                ],
-                css: ExtractTextPlugin.extract({
-                    loader: "css-loader",
-                    fallbackLoader: "vue-style-loader"
-                })
+                }
+                
             }
         }),
         new ExtractTextPlugin('css/[name].css')

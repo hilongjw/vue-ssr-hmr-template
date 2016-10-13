@@ -12,6 +12,8 @@
 <script>
 import compA from '../components/compA.vue'
 export default {
+    name: 'Home',
+    serverCacheKey: () => 'home',
     data () {
         return {
             list: ['test', '233']

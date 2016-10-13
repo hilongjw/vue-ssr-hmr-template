@@ -30,6 +30,7 @@ body {
 <script>
 import umHeader from './components/Header.vue'
 export default {
+  serverCacheKey: () => 'app',
   components: {
     umHeader
   }

@@ -180,9 +180,6 @@ export default {
                 this.$store.dispatch('hideHeaderNav')
             }
         },
-        goLogin () {
-           // this.$router.push('/login')
-        },
         toggleMNav () {
             if (this.HeaderNav.show) {
                 this.$store.dispatch('hideHeaderNav')

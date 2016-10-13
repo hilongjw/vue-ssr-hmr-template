@@ -6,12 +6,16 @@ const vueRender = require('vue-ssr')
 
 const serverConfig = require('../../build/webpack.server')
 
-const indexRenderer = vueRender('index', {
-    cache: require('lru-cache')({
-        max: 1000,
-        maxAge: 1000 * 60 * 15
-    })
-}, serverConfig)
+const indexRenderer = vueRender({
+    projectName: 'index', 
+    rendererOptions: {
+        cache: require('lru-cache')({
+            max: 1000,
+            maxAge: 1000 * 60 * 15
+        })
+    }, 
+    webpackServer: serverConfig
+})
 
 function render (view, data) {
     return pug.compileFile(path.join(__dirname, '../views/' + view + '.pug'), {
