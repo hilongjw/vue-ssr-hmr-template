@@ -1,8 +1,8 @@
 const pug = require('pug')
 const path = require('path')
 
-// const vueRender = require('vue-ssr')
-const vueRender = require('../vue-ssr/renderer')
+const vueRender = require('vue-ssr')
+// const vueRender = require('../vue-ssr/renderer')
 
 const serverConfig = require('../../build/webpack.server')
 
