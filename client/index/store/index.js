@@ -3,40 +3,59 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+// import { 
+//     getUser,
+//     userLogout,
+//     queryArticleById
+// } from '../api'
+
 const state = {
-    User: {
-        name: '2333'
+    HeaderNav: {
+        show: false,
+        navs: [{
+            text: '首页',
+            route: {
+                name: 'home'
+            }
+        }, {
+            text: '文章',
+            route: {
+                name: 'article'
+            }
+        }, {
+            text: '标签',
+            route: {
+                name: 'tag'
+            }
+        }]
     }
 }
 
 const mutations = {
-    USER_SIGN_OUT (state) {
-        state.User = null
-    },
-    USER_SIGN_IN (state, user) {
-        state.User = user
-    },
+    SET_HEADER_NAV (state, active) {
+        state.HeaderNav.show = active
+    }
 }
 
 const actions = {
-    userSignOut ({ commit }) {
-        commit('USER_SIGN_OUT')
+    // for mobile nav
+    showHeaderNav ({ commit }) {
+        commit('SET_HEADER_NAV', true)
     },
-    userSignIn ({ commit }) {
-        commit('USER_SIGN_IN', {
-            name: '233'
-        })
+    hideHeaderNav ({ commit }) {
+        commit('SET_HEADER_NAV', false)
     }
-
 }
 
 const getters = {
-    User: state => state.User
+    HeaderNav: state => state.HeaderNav
 }
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state,
   getters,
   actions,
   mutations
 })
+
+export default store

@@ -4,8 +4,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const Home = require('../views/Home.vue')
-
 const Article = require('../views/Article.vue')
+const Tag = require('../views/Tag.vue')
 
 export default new Router({
     mode: 'history',
@@ -23,5 +23,9 @@ export default new Router({
         path: '/article',
         name: 'article',
         component: Article
+    }, {
+        path: '/tag',
+        name: 'tag',
+        component: Tag
     }]
 })

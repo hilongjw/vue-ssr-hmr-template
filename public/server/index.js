@@ -305,7 +305,7 @@ var __vue_exports__, __vue_options__
 __vue_exports__ = __webpack_require__(5)
 
 /* template */
-var __vue_template__ = __webpack_require__(12)
+var __vue_template__ = __webpack_require__(11)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -353,7 +353,7 @@ module.exports = __vue_exports__
 var __vue_exports__, __vue_options__
 
 /* template */
-var __vue_template__ = __webpack_require__(13)
+var __vue_template__ = __webpack_require__(12)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -380,7 +380,7 @@ var __vue_exports__, __vue_options__
 __vue_exports__ = __webpack_require__(6)
 
 /* template */
-var __vue_template__ = __webpack_require__(11)
+var __vue_template__ = __webpack_require__(13)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -402,14 +402,6 @@ module.exports = __vue_exports__
 /***/ function(module, exports) {
 
 module.exports={render:function (){with(this) {
-  return _h('div', ["\n    it's home page\n    ", _h('comp-a')])
-}},staticRenderFns: []}
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-module.exports={render:function (){with(this) {
   return _h('div', {
     attrs: {
       "id": "app"
@@ -428,7 +420,7 @@ module.exports={render:function (){with(this) {
 }},staticRenderFns: []}
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports) {
 
 module.exports={render:function (){with(this) {
@@ -436,6 +428,14 @@ module.exports={render:function (){with(this) {
 }},staticRenderFns: [function (){with(this) {
   return _h('div', ["Article"])
 }}]}
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+module.exports={render:function (){with(this) {
+  return _h('div', ["\n    it's home page\n    ", _h('comp-a')])
+}},staticRenderFns: []}
 
 /***/ },
 /* 14 */
