@@ -1,6 +1,11 @@
+<style>
+body {
+  font-family: Helvetica, sans-serif;
+}
+</style>
+
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <h1>{{ msg }} login</h1>
   </div>
 </template>
@@ -14,9 +19,3 @@ export default {
   }
 }
 </script>
-
-<style>
-body {
-  font-family: Helvetica, sans-serif;
-}
-</style>
