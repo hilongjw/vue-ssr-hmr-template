@@ -1,12 +1,12 @@
 const pug = require('pug')
 const path = require('path')
 
-const vueRender = require('vue-ssr')
+const VueSSR = require('vue-ssr')
 // const vueRender = require('../vue-ssr/renderer')
 
 const serverConfig = require('../../build/webpack.server')
 
-const indexRenderer = vueRender({
+const indexRenderer = new VueSSR({
     projectName: 'index', 
     rendererOptions: {
         cache: require('lru-cache')({
@@ -25,7 +25,7 @@ function render (view, data) {
 
 function index (req, res) {
     const template = render('index', { title: 'cov-x', bundle: 'index' })
-    indexRenderer(req, res, template)
+    indexRenderer.render(req, res, template)
 }
 
 module.exports = {

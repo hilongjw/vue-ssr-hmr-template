@@ -15,7 +15,7 @@
     "vue": "^2.0.1",
     "vue-router": "^2.0.0",
     "vue-server-renderer": "^2.0.1",
-    "vue-ssr": "^0.1.1",
+    "vue-ssr": "^0.2.2",
     "vue-template-compiler": "^2.0.0-rc.6",
     "vuex": "^2.0.0-rc.3",
     "vuex-router-sync": "^3.0.0"
@@ -34,7 +34,6 @@
     "ora": "^0.3.0",
     "shelljs": "^0.7.4",
     "vue-loader": "^9.2.2",
-    "vue-router": "^2.0.0",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-middleware": "^1.7.0",
     "webpack-dev-server": "^2.1.0-beta.0",
