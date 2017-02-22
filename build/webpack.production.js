@@ -35,7 +35,7 @@ const productionConf = merge(baseConfig, {
                     ],
                     css: ExtractTextPlugin.extract({
                         loader: "css-loader",
-                        fallbackLoader: "vue-style-loader"
+                        fallback: "vue-style-loader"
                     })
                 }
                 
